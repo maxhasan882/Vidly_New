@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Vidly.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .mid {
+        text-align: center;
+    }
+</style>
+<h2>Custommer</h2>
+<div class="table-responsive">
+    <table class="table table-striped table-hover table-bordered">
+        <tbody style="border: 20px">
+             <th style=" background-color: darkturquoise " class="mid"><h3 style="color: white">Custommers</h3></th>
+             <th style="background-color: darkturquoise" class="mid"><h3 style="color: white">Membership Name</h3></th>
+            @foreach (var custommer in Model)
+            {
+               <tr>
+                  <td><b style="font-size: 16px">@Html.ActionLink(custommer.Name, "Details", "Customer", new { id = custommer.Id }, null)</b></td>
+                   <td class="mid"><b>@custommer.MembershipType.MembershipName</b></td>
+
+              </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
