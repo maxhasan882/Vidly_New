@@ -22,7 +22,7 @@
         {
             <tr>
                 <td><b style="font-size: 16px">@Html.ActionLink(custommer.Name, "Details", "Customer", new { id = custommer.Id }, null)</b></td>
-                <td class="mid"><b>@custommer.MembershipType.MembershipName</b><button class="btn btn-danger active" role="button" aria-pressed="true" style="float: right">@Html.ActionLink("Dlt", "Edit", "Customer", new { id = custommer.Id }, null)</button> <button class="btn btn-primary active" role="button" aria-pressed="true" style="float: right">@Html.ActionLink("Edit", "Edit","Customer", new { id = custommer.Id },null)</button></td>
+                <td class="mid"><b>@custommer.MembershipType.MembershipName</b><button class="btn btn-danger active" role="button" aria-pressed="true" style="float: right">@Html.ActionLink("Dlt", "delete", "Customer", new { id = custommer.Id }, null)</button> <button class="btn btn-primary active" role="button" aria-pressed="true" style="float: right">@Html.ActionLink("Edit", "Edit","Customer", new { id = custommer.Id },null)</button></td>
             </tr>
         }
         </tbody>
